@@ -18,7 +18,7 @@ class SearchTests(TestCase):
         )
 
         Manufacturer.objects.create(name="Toyota", country="Japan")
-        Car.objects.create(model="Corolla", manufacturer_id=1)
+        Car.objects.create(model="Corolla")
 
     def test_driver_search(self):
         response = self.client.get(
